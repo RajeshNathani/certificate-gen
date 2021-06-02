@@ -29,7 +29,7 @@ app.get('/gen', (req, res)=>{
     })
     doc.end();
     const file = `${username}.pdf`
-    res.send("downloaded")
+    res.download(file)
 })
 
 app.listen(port)
