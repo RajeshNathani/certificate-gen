@@ -29,7 +29,6 @@ app.get('/gen', (req, res)=>{
     })
     doc.end();
     const file = `${username}.pdf`
-    res.download(file)
     res.send("downloaded")
 })
 
