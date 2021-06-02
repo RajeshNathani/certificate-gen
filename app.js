@@ -12,7 +12,7 @@ const doc = new pdf({
     layout : 'landscape',
     size : "A4"
 })
-/**/
+
 
 app.get('/' , (req, res)=>{
     res.send('index.html')
@@ -30,6 +30,7 @@ app.get('/gen', (req, res)=>{
     doc.end();
     const file = `${username}.pdf`
     res.download(file)
+    res.send("downloaded")
 })
 
 app.listen(port)
